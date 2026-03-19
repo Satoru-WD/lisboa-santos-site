@@ -13,12 +13,15 @@ import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 import Popup from './components/Popup';
 import WhatsAppButton from './components/WhatsAppButton';
+import CookieBanner from './components/CookieBanner';
 
 export default function App() {
   return (
     <div className="min-h-screen selection:bg-accent/30">
+      {/* Skip to main content link - visible on keyboard focus */}
+      <a href="#main-content" className="skip-link">Ir para o conteúdo principal</a>
       <Header />
-      <main>
+      <main id="main-content">
         <Hero />
         <Trust />
         <Services />
@@ -29,6 +32,7 @@ export default function App() {
       <Footer />
       <Popup />
       <WhatsAppButton />
+      <CookieBanner />
     </div>
   );
 }

@@ -3,7 +3,7 @@
 
 @theme {
   --color-primary: #142C4C;
-  --color-accent: #22C55E;
+  --color-accent: #15803D;
   --color-background: #F8FAFC;
   --color-text-primary: #0F172A;
   --color-text-secondary: #475569;
@@ -34,7 +34,7 @@
   }
 
   ::selection {
-    background: rgba(34, 197, 94, 0.2);
+    background: rgba(21, 128, 61, 0.2);
     color: #142C4C;
   }
 }
@@ -44,8 +44,54 @@
     text-wrap: balance;
   }
 
+  /* Screen reader only – hide visually but accessible to assistive tech */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
   /* Subtle section dividers via box-shadow instead of borders for premium feel */
   .section-shadow {
     box-shadow: 0 1px 0 0 #E2E8F0;
   }
+}
+
+/* ============================================================
+   WCAG 2.1 Accessibility: Focus States
+   Provides clear, high-contrast focus rings for keyboard navigation.
+   Uses :focus-visible so mouse clicks don't show the ring.
+   ============================================================ */
+*:focus {
+  outline: none;
+}
+*:focus-visible {
+  outline: 2px solid #15803D;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Skip-to-content link for keyboard users */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: #142C4C;
+  color: white;
+  font-weight: 700;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
 }

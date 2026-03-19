@@ -74,12 +74,10 @@ export default function Process() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <a
-            href="#contato"
-            className="inline-flex items-center gap-2 text-accent font-bold hover:gap-4 transition-all"
-          >
-            Quero começar com um diagnóstico gratuito <ArrowRight size={18} />
+        <div className="mt-16 text-center">
+          <a href="#contato" className="inline-flex items-center gap-2 text-primary font-bold hover:text-accent transition-colors group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded px-2 py-1">
+            Falar com a Lisboa Santos agora
+            <ArrowRight size={18} aria-hidden="true" className="group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
       </div>

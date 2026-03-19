@@ -79,17 +79,21 @@ export default function Services() {
           {/* Final card: CTA */}
           <motion.a
             href="#contato"
-            whileHover={{ y: -6 }}
+            whileHover={{ y: -6, boxShadow: '0 24px 48px rgba(0,0,0,0.08)' }}
             transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-            className="p-8 bg-primary rounded-3xl flex flex-col justify-between group cursor-pointer"
+            className="p-8 bg-[#DCFCE7]/30 rounded-3xl border border-[#22C55E]/20 flex flex-col justify-between group cursor-pointer hover:border-[#15803D]/40 transition-all"
           >
             <div className="space-y-4">
-              <p className="text-white/60 text-sm font-semibold uppercase tracking-widest">Precisa de algo específico?</p>
-              <h3 className="text-2xl font-bold text-white leading-snug">Fale com a gente antes de decidir.</h3>
-              <p className="text-white/70 text-sm leading-relaxed">Fazemos um diagnóstico gratuito e mostramos o melhor caminho para o seu negócio.</p>
+              <p className="text-[#15803D] text-sm font-bold uppercase tracking-widest flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#15803D] animate-pulse"></span>
+                Precisa de algo específico?
+              </p>
+              <h3 className="text-2xl font-bold text-primary leading-snug">Fale com a gente antes de decidir.</h3>
+              <p className="text-text-secondary text-sm leading-relaxed">Fazemos um diagnóstico gratuito e mostramos o melhor caminho para o seu negócio.</p>
             </div>
-            <div className="mt-8 flex items-center gap-2 text-accent font-bold group-hover:gap-4 transition-all">
-              Ver diagnóstico gratuito <ArrowRight size={18} />
+            <div className="mt-8 inline-flex items-center gap-2 text-[#15803D] font-bold group-hover:text-[#166534] transition-colors">
+              Solicitar diagnóstico da minha empresa
+              <ArrowRight size={18} aria-hidden="true" className="group-hover:translate-x-1 transition-transform" />
             </div>
           </motion.a>
         </div>
